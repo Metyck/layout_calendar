@@ -1,7 +1,5 @@
 $calendar__day-size: 100px;
-
 $calendar-width: $calendar__day-size * 7 + 6;
-
 $days: (
   'mon': 0,
   'tue': 1,
@@ -16,12 +14,16 @@ body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
   font-size: 30px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .calendar {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
+  flex-flow: row wrap;
   padding: 10px;
   gap: 1px;
   width: $calendar-width;
@@ -33,7 +35,7 @@ body {
     justify-content: center;
     align-items: center;
 
-    color: #eee;
+    background-color: #eee;
     width: $calendar__day-size;
     height: $calendar__day-size;
     border: 1px solid black;
