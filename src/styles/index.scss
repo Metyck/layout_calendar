@@ -30,11 +30,7 @@ body {
 
   &__day {
     box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
+    display: none;
     background-color: #eee;
     width: $calendar__day-size;
     height: $calendar__day-size;
@@ -53,13 +49,10 @@ body {
       color: black;
       content: '#{$i}';
     }
-  }
-
-  @for $length from 28 through 31 {
-    &--month-length-#{$length} {
-      &__day:nth-child(n + #{$length + 1}) {
-        display: none;
-      }
+    &--month-length-#{$i} :nth-child(-n + #{$i}) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
   }
 
