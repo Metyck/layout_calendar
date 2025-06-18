@@ -1,14 +1,4 @@
-$calendar__day-size: 100px;
-$calendar-width: $calendar__day-size * 7 + 6;
-$days: (
-  'mon': 0,
-  'tue': 1,
-  'wed': 2,
-  'thu': 3,
-  'fri': 4,
-  'sat': 5,
-  'sun': 6,
-);
+@import '../variables.scss';
 
 body {
   margin: 0;
